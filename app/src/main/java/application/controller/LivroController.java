@@ -55,7 +55,7 @@ public class LivroController {
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public String update(
         @RequestParam("titulo") String titulo,
-        @RequestParam("id") int id
+        @RequestParam("id") int id,
     ) {
         Optional<Livro> livro = livroRepo.findById(id);
         if(!livro.isPresent()) {
